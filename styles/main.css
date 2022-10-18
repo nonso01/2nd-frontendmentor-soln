@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&family=Space+Grotesk:wght@400;500&display=swap");
 :root {
   --cy: hsla(178,100%,50%,1);
   --s-bl: hsla(215,50%,70%,1);
@@ -68,7 +69,7 @@
   box-sizing: border-box;
   border: none;
   outline: none;
-  font-family: sans-serif;
+  font-family: "Outfit", sans-serif;
   font-style: normal;
 }
 
@@ -120,9 +121,6 @@ p, span, i {
   opacity: 0;
   border-radius: inherit;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 .card__img:hover:before {
   opacity: 0.7;
@@ -131,7 +129,7 @@ p, span, i {
   height: 28%;
 }
 .card__desc img {
-  vertical-align: middle;
+  vertical-align: -10%;
   margin-inline: 3px;
 }
 .card__person i {
@@ -146,8 +144,18 @@ p, span, i {
 }
 
 hr {
-  height: 4px;
   border-radius: var(--rad);
+  height: 2px;
+}
+
+#mode {
+  --custom: hsla(155,74%,64%,1);
+  --black: hsla(155, 5%, 18%, 1);
+  background-color: var(--wt);
+}
+#mode .card {
+  background-color: var(--custom);
+  box-shadow: 0 var(--fts) calc(var(--rad) * 1.2) var(--rad) hsla(155deg, 74%, 64%, 0.2);
 }
 
 @media (max-width: 500px) {

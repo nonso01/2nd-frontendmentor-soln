@@ -1,4 +1,4 @@
-// @import font
+@import url('https://fonts.googleapis.com/css2?family=Outfit&family=Space+Grotesk:wght@400;500&display=swap');
 
 $im: !important;
 
@@ -12,7 +12,7 @@ $im: !important;
  --ts: transparent;
  --trans: all 200ms ease;
  --cn: center;
- --rad: 10px; // in rem
+ --rad: 10px; 
  --fts: 15.899px;
  --st-w: 100%;
  --mx-w: 1440px;
@@ -78,10 +78,10 @@ $im: !important;
  border: none;
  outline: none;
  font:{
-  family: sans-serif;
+  family: "Outfit", sans-serif;
   style: normal;
  }
-// border: var(--bd);
+ //border: var(--bd);
 }
 
 html{
@@ -128,15 +128,13 @@ h1{
    opacity: 0;
    border-radius: inherit;
    position: absolute;
-   top: 50%; left: 50%; transform: translate(-50%,-50%);
-   //z-index: -1;
   }
   &:hover:before{ opacity: 0.7;}
  }
  &__desc{
   height: 28%;
   img{
-   vertical-align: middle;
+   vertical-align: -10%;
    margin-inline: 3px;
   }
  }
@@ -151,9 +149,22 @@ h1{
  
 }
 hr{
- height: 4px;
  border-radius: var(--rad);
+// border-color: var(--line-bg);
+ height: 2px;
 }
+
+
+
+ #mode{
+  --custom: hsla(155,74%,64%,1);
+  --black: hsla(155, 5%, 18%, 1);
+  background-color: var(--wt);
+  .card{
+     background-color: var(--custom);
+     box-shadow: 0 var(--fts) calc(var(--rad)*1.2) var(--rad) hsla(155,74%,64%,0.2);
+  }
+ }
 
 
 @media (max-width: 500px){
