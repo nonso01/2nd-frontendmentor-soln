@@ -63,6 +63,10 @@
   color: var(--cy);
 }
 
+.tx-cn {
+  text-align: var(--cn);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -74,7 +78,7 @@
 }
 
 html {
-  width: var(--mx-w);
+  width: var(--st-w);
   min-height: var(--st-h);
   scroll-behavior: smooth;
   font-size: var(--fts);
@@ -94,7 +98,7 @@ h2 {
   font-size: 1rem;
 }
 
-p, span, i {
+p, span, i, a {
   color: var(--s-bl);
   line-height: 1.4;
 }
@@ -148,14 +152,45 @@ hr {
   height: 2px;
 }
 
+.theme {
+  height: calc(var(--fts) * 1.5);
+  width: calc(var(--fts) * 4);
+  margin: var(--fts);
+  border-radius: var(--fts);
+  border: 2px solid var(--s-bl);
+}
+.theme div {
+  width: 20px;
+  height: 20px;
+  border-radius: var(--st-w);
+  background-color: var(--s-bl);
+}
+.theme.mv {
+  border-color: var(--bk);
+}
+.theme.mv div {
+  background-color: var(--custom);
+  transform: translateX(198%);
+}
+
 #mode {
   --custom: hsla(155,74%,64%,1);
-  --black: hsla(155, 5%, 18%, 1);
+  --bk: hsla(155, 5%, 18%, 1);
   background-color: var(--wt);
+}
+#mode * {
+  color: var(--bk);
+  outline-color: var(--bk);
 }
 #mode .card {
   background-color: var(--custom);
   box-shadow: 0 var(--fts) calc(var(--rad) * 1.2) var(--rad) hsla(155deg, 74%, 64%, 0.2);
+}
+#mode .card__img:hover:before {
+  background-color: hsla(155deg, 5%, 18%, 0.8);
+}
+#mode hr {
+  background-color: var(--bk);
 }
 
 @media (max-width: 500px) {

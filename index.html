@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-col-mn" id="mode">
+<html lang="en" class="bg-col-mn" id="">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -11,6 +11,7 @@
  <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body class="fx fx-col">
+ 
  
  <div class="card bg-col-card fx fx-col fx-btw fx-self">
   <div class="card__img trans">
@@ -38,18 +39,17 @@
 </span> 
 </div>
 
-  
  </div>
    
-   
-   <div class="mode">
-     <input type="checkbox">
+   <div class="theme trans fx-self">
+     <div class="trans"></div>
    </div>
+
   
-  <div class="attr hide">
+  <div class="att fx-self tx-cn">
     
     <p ="last-p">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://twitter.com/Nonsomartin6">Nonso Martin</a>.</p>
+    Coded by <a href="https://twitter.com/Nonsomartin6" target="_blank">Nonso Martin</a>.</p>
   </div>
   
   <script>
@@ -64,6 +64,20 @@
     const trigger= e.addEventListener(t,f)
    }
    
+   const html= dq("html")
+   const theme= dq(".theme")
+   const theme_div= dq(".theme div")
+   
+   event(theme,"click",()=>{
+    if(theme.classList.contains("mv")){
+     theme.classList.remove("mv")
+     html.id= ""
+    }
+    else{
+     theme.classList.add("mv")
+     html.id="mode"
+    }
+   })
   
    
   </script>

@@ -70,6 +70,9 @@ $im: !important;
 .hover\:col-cy:hover{
  color: var(--cy);
 }
+.tx-cn{
+ text-align: var(--cn);
+}
 
 *{
  margin: 0;
@@ -85,7 +88,7 @@ $im: !important;
 }
 
 html{
- width: var(--mx-w);
+ width: var(--st-w);
  min-height: var(--st-h);
  scroll-behavior: smooth;
  font-size: var(--fts);
@@ -103,7 +106,7 @@ h1{
   color: var(--cy);
   font-size: 1rem;
  }
- p,span,i{
+ p,span,i,a{
   color: var(--s-bl);
   line-height: 1.4;
  }
@@ -150,20 +153,49 @@ h1{
 }
 hr{
  border-radius: var(--rad);
-// border-color: var(--line-bg);
  height: 2px;
 }
-
+.theme{
+ height: calc(var(--fts)*1.5);
+ width: calc(var(--fts)*4);
+ margin: var(--fts);
+ border-radius: var(--fts);
+ border: 2px solid var(--s-bl);
+ div{
+  width: 20px;
+  height: 20px;
+  border-radius: var(--st-w);
+  background-color: var(--s-bl);
+ }
+ &.mv{
+  border-color: var(--bk);
+  div{
+   background-color: var(--custom);
+   transform: translateX(198%);
+  }
+ }
+}
 
 
  #mode{
   --custom: hsla(155,74%,64%,1);
-  --black: hsla(155, 5%, 18%, 1);
+  --bk: hsla(155, 5%, 18%, 1);
   background-color: var(--wt);
+  *{
+   color: var(--bk);
+   outline-color: var(--bk);
+  }
   .card{
      background-color: var(--custom);
      box-shadow: 0 var(--fts) calc(var(--rad)*1.2) var(--rad) hsla(155,74%,64%,0.2);
+     &__img:hover:before{
+      background-color: hsla(155, 5%, 18%, 0.8);
+     }
   }
+  
+hr{
+ background-color: var(--bk);
+}
  }
 
 
