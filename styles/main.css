@@ -1,0 +1,159 @@
+:root {
+  --cy: hsla(178,100%,50%,1);
+  --s-bl: hsla(215,50%,70%,1);
+  --main-bg: hsla(217,54%,11%,1);
+  --card-bg: hsla(216,50%,16%,1);
+  --line-bg: hsla(215,32%,27%,1);
+  --wt: #fff;
+  --ts: transparent;
+  --trans: all 200ms ease;
+  --cn: center;
+  --rad: 10px;
+  --fts: 15.899px;
+  --st-w: 100%;
+  --mx-w: 1440px;
+  --st-h: 100vh;
+  --bd: 1px solid;
+}
+
+/* layout flex */
+.fx {
+  display: flex;
+}
+.fx-row {
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-content: var(--cn);
+}
+.fx-col {
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-content: var(--cn);
+}
+.fx-around {
+  justify-content: space-around !important;
+}
+.fx-btw {
+  justify-content: space-between !important;
+}
+.fx-self {
+  align-self: var(--cn);
+}
+
+/* utility classes */
+.trans, .trans:hover, .trans:active, .trans:before, .trans:after {
+  transition: var(--trans);
+}
+.hide {
+  display: none;
+}
+
+.bg-col-mn {
+  background-color: var(--main-bg);
+}
+.bg-col-card {
+  background-color: var(--card-bg);
+}
+.bg-col-line {
+  background-color: var(--line-bg);
+}
+
+.hover\:col-cy:hover {
+  color: var(--cy);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: sans-serif;
+  font-style: normal;
+}
+
+html {
+  width: var(--mx-w);
+  min-height: var(--st-h);
+  scroll-behavior: smooth;
+  font-size: var(--fts);
+  overflow: auto;
+}
+html body {
+  min-height: inherit;
+}
+
+h1 {
+  color: var(--wt);
+  font-size: 1.2rem;
+}
+
+h2 {
+  color: var(--cy);
+  font-size: 1rem;
+}
+
+p, span, i {
+  color: var(--s-bl);
+  line-height: 1.4;
+}
+
+.card {
+  width: 21.385rem;
+  height: 34.613rem;
+  border-radius: calc(var(--rad) * 1.2);
+  padding: 1%;
+  box-shadow: 0 var(--rad) calc(var(--rad) * 1.5) var(--rad) rgba(0, 0, 0, 0.1);
+}
+.card__img {
+  height: 55%;
+  background: var(--ts) url("/images/image-equilibrium.jpg") no-repeat border-box center/cover;
+  border-radius: inherit;
+  position: relative;
+}
+.card__img:before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--cy) url("/images/icon-view.svg") no-repeat border-box var(--cn)/20% 20%;
+  opacity: 0;
+  border-radius: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card__img:hover:before {
+  opacity: 0.7;
+}
+.card__desc {
+  height: 28%;
+}
+.card__desc img {
+  vertical-align: middle;
+  margin-inline: 3px;
+}
+.card__person i {
+  color: var(--wt);
+}
+.card__person img {
+  height: 40px;
+  width: 40px;
+  border: 2px solid var(--ts);
+  outline: 2px solid var(--wt);
+  border-radius: calc(var(--st-w) / 2);
+}
+
+hr {
+  height: 4px;
+  border-radius: var(--rad);
+}
+
+@media (max-width: 500px) {
+  html {
+    width: var(--st-w);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
